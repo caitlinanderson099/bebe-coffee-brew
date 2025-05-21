@@ -10,9 +10,11 @@ import { useEffect } from 'react' // ✅ Import useEffect
 
 const App = () => {
 
+
   useEffect(() => {
     AOS.init();
   }, []);
+
 
 
   return (

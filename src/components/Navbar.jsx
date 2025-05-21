@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
 import { FaCartShopping, FaFacebook, FaInstagram, FaTwitter, FaBars, FaXmark } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
+import { useCart } from '../context/CartContext'; // Add this import
+
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
+ const [menuOpen, setMenuOpen] = useState(false);
+  const { cart } = useCart(); // Access cart from context
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen)
-  }
+    setMenuOpen(!menuOpen);
+  };
 
   return (
     <header className="navbar">
@@ -35,7 +38,7 @@ const Navbar = () => {
         <div className="cart-icons">
           <div className="cart">
             <FaCartShopping />
-            <p>(0)</p>
+            <p>({cart.length})</p> {/* Live cart count */}
           </div>
           <div className="socials">
             <FaInstagram />

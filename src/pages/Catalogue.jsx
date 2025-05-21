@@ -1,12 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import PageHeader from '../components/PageHeader';
+import { useCart } from '../context/CartContext'; // Import context
+
 
 const Catalogue = () => {
 
     const [products, setProducts] = useState([]);
     const [bestSellers, setBestSellers] = useState([]);
     const [newArrivals, setNewArrivals] = useState([]);
+      const { addToCart } = useCart(); // Use context to add to cart
+      const [showModal, setShowModal] = useState(false);
+const [addedProduct, setAddedProduct] = useState(null);
+
+
 
   useEffect(() => {
     axios.get('/PRODUCTS.json')
@@ -33,7 +40,9 @@ const Catalogue = () => {
             <p className='roast'>Roast Level: {product.roast_level}</p>
             <p className='description'>{product.short_description}</p>
             <p className='price'>${product.price}</p>
-            <button className='product-button'>ADD TO CART</button>
+            <button className='product-button' onClick={() => { addToCart(product); setAddedProduct(product); setShowModal(true);}}>
+              ADD TO CART
+            </button>
           </div>
         ))}
       </div>
@@ -52,7 +61,9 @@ const Catalogue = () => {
             <p className='roast'>Roast Level: {product.roast_level}</p>
             <p className='description'>{product.short_description}</p>
             <p className='price'>${product.price}</p>
-            <button className='product-button'>ADD TO CART</button>
+            <button className='product-button' onClick={() => { addToCart(product); setAddedProduct(product); setShowModal(true);}}>
+              ADD TO CART
+            </button>          
           </div>
         ))}
       </div>
@@ -71,9 +82,20 @@ const Catalogue = () => {
             <p className='roast'>Roast Level: {product.roast_level}</p>
             <p className='description'>{product.short_description}</p>
             <p className='price'>${product.price}</p>
-            <button className='product-button'>ADD TO CART</button>
+            <button className='product-button' onClick={() => { addToCart(product); setAddedProduct(product); setShowModal(true);}}>
+              ADD TO CART
+            </button>          
           </div>
         ))}
+        {showModal && addedProduct && (
+  <div className="modal-overlay" onClick={() => setShowModal(false)}>
+    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <h3>Added to Cart</h3>
+      <p>{addedProduct.title} has been added to your cart.</p>
+      <button onClick={() => setShowModal(false)}>OK</button>
+    </div>
+  </div>
+)}
       </div>
     </section>
   );
