@@ -147,7 +147,9 @@ button:active:before {
 /* Base styles */
 .navbar {
   background-color: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+box-shadow: 4px 5px 12px -4px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 4px 5px 12px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 4px 5px 12px -4px rgba(0,0,0,0.75);  
   padding: 2.5rem;
   position: relative;
   z-index: 10;
@@ -623,7 +625,11 @@ footer {
 }
 
 .product-card {
-  border: 1px solid #eee;
+  border: 2px solid var(--dark-brown-color);
+  border-radius: 10px;
+  box-shadow: 4px 5px 12px -4px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 4px 5px 12px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 4px 5px 12px -4px rgba(0,0,0,0.75);
   padding: 1rem;
   text-align: center;
   display: flex;
@@ -638,6 +644,7 @@ footer {
     width: 100%;
     height: 300px;
     object-fit: cover;
+      border-radius: 10px;
   }
   .description {
     color: var(--dark-brown-color);
@@ -665,34 +672,48 @@ footer {
 }
 
 .modal-content {
-  background: white;
+  background: var(--background-color);
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 10px;
   max-width: 90%;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  animation: fadeIn 0.3s ease-out;
+  box-shadow: 4px 5px 12px -4px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 4px 5px 12px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 4px 5px 12px -4px rgba(0,0,0,0.75);
+  color: var(--dark-brown-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  span {
+    font-family: var(--main-font);
+    font-weight: bold;
+  }
 }
 
 .modal-content h3 {
   margin-bottom: 0.5rem;
+  font-family: var(--main-font);
+  font-size: 2.5em;
+  color: var(--dark-brown-color);
 }
 
 .modal-content button {
   margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background: #333;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
 }
 
 
 
 
 
-/* MEDIA QUERIES FOR THE ELEMENTS ON THE ABOUT PAGE */
+/* MEDIA QUERIES FOR THE ELEMENTS ON THE CATALOGUE PAGE */
+@media screen and (max-width: 768px) {
+  /* css styles here */
+}
+
+
+
+/* MEDIA QUERIES FOR THE ELEMENTS ON THE SINGLE PAGE */
 @media screen and (max-width: 768px) {
   /* css styles here */
 }

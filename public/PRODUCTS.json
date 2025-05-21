@@ -9,7 +9,8 @@
         "new_arrival": true,
         "short_description": "Delicious, Honey, Macadamia",
         "roast_level": "●●●○○",
-        "product_image": "/product_img1.jpg"
+        "product_image": "/product_img1.jpg",
+        "_id": "felixcoffee"
     },
 
     {
@@ -22,7 +23,8 @@
         "new_arrival": true,
         "short_description": "Delicious, Honey, Macadamia",
         "roast_level": "●●●○○",
-        "product_image": "/product_img1.jpg"
+        "product_image": "/product_img1.jpg",
+        "_id": "decafcoffee"
     },
 
      {
@@ -35,7 +37,8 @@
         "new_arrival": true,
         "short_description": "Delicious, Honey, Macadamia",
         "roast_level": "●●●●○",
-        "product_image": "/product_img2.jpg"
+        "product_image": "/product_img2.jpg",
+        "_id": "nomicoffee"
     },
 
      {
@@ -48,7 +51,8 @@
         "new_arrival": true,
         "short_description": "Delicious, Honey, Macadamia",
         "roast_level": "●○○○○",
-        "product_image": "/product_img3.jpg"
+        "product_image": "/product_img3.jpg",
+        "_id": "onyxcoffee"
     },
 
      {
@@ -61,6 +65,7 @@
         "new_arrival": true,
         "short_description": "Delicious, Honey, Macadamia",
         "roast_level": "●●○○○",
-        "product_image": "/product_img4.jpg"
+        "product_image": "/product_img4.jpg",
+        "_id": "cavemancoffee"
     }
 ]

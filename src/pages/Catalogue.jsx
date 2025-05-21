@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import PageHeader from '../components/PageHeader';
 import { useCart } from '../context/CartContext'; // Import context
+import { useNavigate } from 'react-router-dom';
 
 
 const Catalogue = () => {
@@ -12,6 +13,8 @@ const Catalogue = () => {
       const { addToCart } = useCart(); // Use context to add to cart
       const [showModal, setShowModal] = useState(false);
 const [addedProduct, setAddedProduct] = useState(null);
+
+const navigate = useNavigate();
 
 
 
@@ -28,14 +31,18 @@ const [addedProduct, setAddedProduct] = useState(null);
       });
   }, []);
 
+  const handleProductClick = (id) => {
+    navigate(`/product/${id}`);
+  };
+
    // BEST SELLERS SECTION COMPONENT
   const BestSellers = () => (
     <section className="best-sellers">
       <h2 className='section-title'>Best Sellers</h2>
       <div className="product-grid">
         {bestSellers.map(product => (
-          <div key={product.id} className="product-card">
-            <img src={product.product_image} alt={product.title} />
+        <div key={product.id} className='product-card'>
+            <img src={product.product_image} alt={product.title} onClick={() => handleProductClick(product.id)}/>
             <h4>{product.title}</h4>
             <p className='roast'>Roast Level: {product.roast_level}</p>
             <p className='description'>{product.short_description}</p>
@@ -91,8 +98,8 @@ const [addedProduct, setAddedProduct] = useState(null);
   <div className="modal-overlay" onClick={() => setShowModal(false)}>
     <div className="modal-content" onClick={(e) => e.stopPropagation()}>
       <h3>Added to Cart</h3>
-      <p>{addedProduct.title} has been added to your cart.</p>
-      <button onClick={() => setShowModal(false)}>OK</button>
+      <p><span>{addedProduct.title}</span> <br/>has been added to your cart.</p>
+      <button onClick={() => setShowModal(false)}>CONTINUE</button>
     </div>
   </div>
 )}
