@@ -1,0 +1,20 @@
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Home from '../pages/Home'
+import About from '../pages/About'
+import Catalogue from '../pages/Catalogue'
+
+const Links = () => {
+  return (
+    <>
+    <Routes>
+        <Route exact path='/' element={<Home/>}/>
+        <Route path='/aboutus' element={<About/>}/>
+        <Route path='/ourcatalogue' element={<Catalogue/>}/>
+    </Routes>
+      
+    </>
+  )
+}
+
+export default Links

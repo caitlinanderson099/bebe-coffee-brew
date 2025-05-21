@@ -1,0 +1,66 @@
+[
+    {
+        "title": "Felix Haffee: Hennisa Athiopien",
+        "price": "25.00",
+        "description": "bifiwvfiwvf",
+        "size": "250g",
+        "grind": "Beans",
+        "best_seller": true,
+        "new_arrival": true,
+        "short_description": "Delicious, Honey, Macadamia",
+        "roast_level": "●●●○○",
+        "product_image": "/product_img1.jpg"
+    },
+
+    {
+        "title": "Decaf",
+        "price": "25.00",
+        "description": "bifiwvfiwvf",
+        "size": "250g",
+        "grind": "Beans",
+        "best_seller": false,
+        "new_arrival": true,
+        "short_description": "Delicious, Honey, Macadamia",
+        "roast_level": "●●●○○",
+        "product_image": "/product_img1.jpg"
+    },
+
+     {
+        "title": "Nomi Coffee: Keramo Village",
+        "price": "25.00",
+        "description": "bifiwvfiwvf",
+        "size": "250g",
+        "grind": "Beans",
+        "best_seller": true,
+        "new_arrival": true,
+        "short_description": "Delicious, Honey, Macadamia",
+        "roast_level": "●●●●○",
+        "product_image": "/product_img2.jpg"
+    },
+
+     {
+        "title": "Onyx: Never Settle for Good Enough",
+        "price": "25.00",
+        "description": "bifiwvfiwvf",
+        "size": "250g",
+        "grind": "Beans",
+        "best_seller": true,
+        "new_arrival": true,
+        "short_description": "Delicious, Honey, Macadamia",
+        "roast_level": "●○○○○",
+        "product_image": "/product_img3.jpg"
+    },
+
+     {
+        "title": "Caveman Coffee: Sabertooth Roast",
+        "price": "25.00",
+        "description": "bifiwvfiwvf",
+        "size": "250g",
+        "grind": "Beans",
+        "best_seller": true,
+        "new_arrival": true,
+        "short_description": "Delicious, Honey, Macadamia",
+        "roast_level": "●●○○○",
+        "product_image": "/product_img4.jpg"
+    }
+]
